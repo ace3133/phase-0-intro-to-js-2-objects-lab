@@ -72,32 +72,3 @@ const employee = {
   name: "sam",
   streetAddress: "11 broadway"
 };
-function updateEmployeeWithKeyAndValue(employee, key, value) {
-  // Create a new object using the spread operator
-  return {
-    ...employee,
-    [key]: value
-  };
-}
-function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-  // Mutate the original employee object
-  employee[key] = value;
-
-  // Return the mutated object (optional)
-  return employee;
-}
-function deleteFromEmployeeByKey(employee, key) {
-  // Create a new object using the spread operator while excluding the specified key
-  const updatedEmployee = { ...employee };
-  delete updatedEmployee[key];
-
-  // Return the new object without the specified key-value pair
-  return updatedEmployee;
-}
-function destructivelyDeleteFromEmployeeByKey(employee, key) {
-  // Mutate the original employee object by deleting the specified key
-  delete employee[key];
-
-  // Return the mutated object (optional)
-  return employee;
-}
